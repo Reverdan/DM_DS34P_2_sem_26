@@ -49,6 +49,37 @@ public class MainActivity extends AppCompatActivity
         txvResultado = findViewById(R.id.txvResultado);
     }
 
+    public void executar(String op)
+    {
+        try
+        {
+            Double n1 = 0.0;
+            Double n2 = 0.0;
+            Double resultado = 0.0;
+            n1 = Double.parseDouble(edtPrimeiroNumero.getText().toString());
+            n2 = Double.parseDouble(edtSegundoNumero.getText().toString());
+            if (op.equals("+")) resultado = n1 + n2;
+            if (op.equals("-")) resultado = n1 - n2;
+            if (op.equals("*")) resultado = n1 * n2;
+            if (op.equals("/"))
+            {
+                if (n2 == 0)
+                   txvResultado.setText(getString(R.string.msg_divisao_zero));
+                else
+                {
+                    resultado = n1 / n2;
+                    txvResultado.setText(resultado.toString());
+                }
+            }
+            else
+                txvResultado.setText(resultado.toString());
+        }
+        catch (Exception e)
+        {
+            txvResultado.setText(getString(R.string.msg_erro_calculo));
+        }
+    }
+
     public void eventos()
     {
         btnSomar.setOnClickListener(new View.OnClickListener()
@@ -56,13 +87,34 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Double n1 = 0.0;
-                Double n2 = 0.0;
-                Double resultado = 0.0;
-                n1 = Double.parseDouble(edtPrimeiroNumero.getText().toString());
-                n2 = Double.parseDouble(edtSegundoNumero.getText().toString());
-                resultado = n1 + n2;
-                txvResultado.setText(resultado.toString());
+                executar("+");
+            }
+        });
+
+        btnSubtrair.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                executar("-");
+            }
+        });
+
+        btnMultiplicar.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                executar("*");
+            }
+        });
+
+        btnDividir.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                executar("/");
             }
         });
     }

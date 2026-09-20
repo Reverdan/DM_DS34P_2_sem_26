@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculadoraNoite</string>
+    <string name="DigitePrimeiroNumero">Insert the first number</string>
+    <string name="DigiteSegundoNumero">Insert the second number</string>
+    <string name="Somar">Sum</string>
+    <string name="Subtrair">Subtract</string>
+    <string name="Multiplicar">Multiply</string>
+    <string name="Dividir">Divide</string>
+    <string name="Resultado">Result</string>
+    <string name="msg_divisao_zero">Division by zero</string>
+    <string name="msg_erro_calculo">Calculation error</string>
+</resources>

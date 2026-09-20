@@ -16,18 +16,19 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:orientation="vertical" >
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Digite o primeiro número" />
+                android:text="@string/DigitePrimeiroNumero" />
 
             <EditText
                 android:id="@+id/edtPrimeiroNumero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:layout_marginBottom="20dp"
                 android:text="" />
 
@@ -35,14 +36,14 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Digite o segundo número" />
+                android:text="@string/DigiteSegundoNumero" />
 
             <EditText
                 android:id="@+id/edtSegundonumero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:layout_marginBottom="20dp"
                 android:text="" />
 
@@ -56,17 +57,17 @@
                     android:id="@+id/btnSomar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginRight="10dp"
-                    android:text="Somar" />
+                    android:layout_weight="1"
+                    android:text="@string/Somar" />
 
                 <Button
                     android:id="@+id/btnSubtrair"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
-                    android:text="Subtrair" />
+                    android:layout_weight="1"
+                    android:text="@string/Subtrair" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,17 +79,17 @@
                     android:id="@+id/btnMultiplicar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginRight="10dp"
-                    android:text="Multiplicar" />
+                    android:layout_weight="1"
+                    android:text="@string/Multiplicar" />
 
                 <Button
                     android:id="@+id/btnDividir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
-                    android:text="Dividir" />
+                    android:layout_weight="1"
+                    android:text="@string/Dividir" />
             </LinearLayout>
 
             <TextView
@@ -96,8 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:textSize="30sp"
-                android:text="Resultado" />
+                android:text="@string/Resultado"
+                android:textSize="30sp" />
         </LinearLayout>
 
     </ScrollView>

@@ -2,3 +2,4 @@
 plugins {
     alias(libs.plugins.android.application) apply false
 }
+extra["sourceCompatibility"] = JavaVersion.VERSION_1_7
